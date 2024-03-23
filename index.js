@@ -60,15 +60,17 @@ client.on(Events.InteractionCreate, async interaction => {
 			}
 		}
 	} else if (interaction.isButton()) {
-		const linkButton = new ButtonBuilder()
-			.setLabel('C\'est parti ! 🚀')
-			.setURL('https://google.fr')
-			.setStyle(ButtonStyle.Link);
+		if (interaction.customId && interaction.customId.startsWith('register-')) {
+			const linkButton = new ButtonBuilder()
+				.setLabel('C\'est parti ! 🚀')
+				.setURL(`https://google.fr?entry.33=${interaction.user.globalName}`)
+				.setStyle(ButtonStyle.Link);
 
-		const row = new ActionRowBuilder()
-			.addComponents(linkButton);
+			const row = new ActionRowBuilder()
+				.addComponents(linkButton);
 
-		await interaction.reply({ components: [row], ephemeral: true });
+			await interaction.reply({ components: [row], ephemeral: true });
+		}
 	}
 });
 
