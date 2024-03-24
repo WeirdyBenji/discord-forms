@@ -19,6 +19,11 @@ module.exports = {
 					{ name: 'Pau 24', value: 'pau24' },
 					{ name: 'Toulouse 24', value: 'tls24' },
 				),
+		)
+		.addStringOption(option =>
+			option
+				.setName('message-id')
+				.setDescription('The origin message will be mentioned'),
 		),
 	async execute(interaction) {
 		const registerButton = new ButtonBuilder()
@@ -29,10 +34,25 @@ module.exports = {
 		const row = new ActionRowBuilder()
 			.addComponents(registerButton);
 
-		const channel = await interaction.client.channels.fetch(interaction.channel.id);
-		await channel.send({ components: [row] });
+		let message = null;
+		const messageId = interaction.options.getString('message-id');
+		if (messageId) {
+			try {
+				message = await interaction.channel.messages.fetch(messageId);
+			} catch (e) {
+				await interaction.reply({ content: e.message, ephemeral: true });
+				return;
+			}
+		}
 
-		await interaction.reply({ content: 'Done.', ephemeral: true });
+		if (message && message.id) {
+			message.reply({ components: [row] });
+		} else {
+			const channel = await interaction.client.channels.fetch(interaction.channel.id);
+			await channel.send({ components: [row] });
+		}
+
+		await interaction.reply({ content: 'Done', ephemeral: true });
 		await interaction.deleteReply();
 	},
 };
