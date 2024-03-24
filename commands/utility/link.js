@@ -10,7 +10,15 @@ module.exports = {
 			option
 				.setName('campaign-id')
 				.setDescription('ID identifying which campaign url to search')
-				.setRequired(true),
+				.setRequired(true)
+				.addChoices(
+					{ name: 'PM 03 24', value: 'pm0324' },
+					{ name: 'Montpellier 24', value: 'mtp24' },
+					{ name: 'Springbreak 24', value: 'spb24' },
+					{ name: 'PM 10 24', value: 'pm1024' },
+					{ name: 'Pau 24', value: 'pau24' },
+					{ name: 'Toulouse 24', value: 'tls24' },
+				),
 		),
 	async execute(interaction) {
 		const registerButton = new ButtonBuilder()
