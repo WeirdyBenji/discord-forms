@@ -61,9 +61,13 @@ client.on(Events.InteractionCreate, async interaction => {
 		}
 	} else if (interaction.isButton()) {
 		if (interaction.customId && interaction.customId.startsWith('register-')) {
+			const { url } = await fetch(`http://localhost:3000/campaigns/${interaction.customId.split('register-')[1]}?discordId=${interaction.user.id}&discordUsername${interaction.user.username}&discordGlobalName=${interaction.user.globalName}`)
+				.then(response => response.json())
+				.catch(error => console.error('Error:', error));
+
 			const linkButton = new ButtonBuilder()
 				.setLabel('C\'est parti ! 🚀')
-				.setURL(`https://google.fr?entry.33=${interaction.user.globalName}&entry.12=${interaction.customId.split('register-')[1]}`)
+				.setURL(url)
 				.setStyle(ButtonStyle.Link);
 
 			const row = new ActionRowBuilder()

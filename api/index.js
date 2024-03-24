@@ -1,31 +1,36 @@
 import Fastify from 'fastify'
+import forms from './forms.json' assert {type: 'json'};
+import users from './answers.json' assert {type: 'json'};
 
 const fastify = Fastify({
   logger: true
 })
 
-const forms = [
-  { id: 1, slug: "pm0324" },
-  { id: 2, slug: "mtp24" },
-  { id: 3, slug: "spb24" },
-  { id: 4, slug: "pm1024" },
-  { id: 5, slug: "pau24" },
-  { id: 6, slug: "tls24" },
-]
-const answers = [{
-  id: 1,
-  discordId: "121212121212",
-  formSlug: "mtp24"
-}]
+fastify.get('/campaigns/:campId', async function handler (request, reply) {
+  const { campId } = request.params
+  const { discordId } = request.query
 
-fastify.get('/', async function handler (request, reply) {
-  return { hello: 'world' }
-})
+  const formSelected = forms.filter(e => e.slug === campId)[0]
+  if (!formSelected) return reply.callNotFound();
 
-fastify.get('/campaigns/:id', async function handler (request, reply) {
-  const form = forms.filter(e => e.slug === request.params.id)[0]
-  if (!form) return reply.callNotFound();
-  return form
+  const usersFiltered = users.filter(e => e.discordId === discordId)
+  const lastUserAnswer = usersFiltered?.[usersFiltered.length - 1];
+
+  const discordKeys = ["discordId", "discordUsername", "discordGlobalName"]
+  let url = new URL(formSelected.gformUrl)
+  discordKeys.map(e => formSelected.formKeys[e]
+    && request.query[e]
+    && url.searchParams.append(formSelected.formKeys[e], request.query[e]))
+
+  if (lastUserAnswer) {
+    const formKeys = Object.keys(formSelected.formKeys)
+      .filter(e => discordKeys.indexOf(e) === -1)
+    formKeys.map(e => formSelected.formKeys[e]
+      && lastUserAnswer[e]
+      && url.searchParams.append(formSelected.formKeys[e], lastUserAnswer[e]))
+  }
+
+  return { url }
 })
 
 try {

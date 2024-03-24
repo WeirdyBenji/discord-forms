@@ -1,0 +1,18 @@
+[
+  {
+    "id": 0,
+    "discordId": "121212121212",
+    "formSlug": "mtp24",
+    "firstName": "first name",
+    "discordGlobalName": "dgn",
+    "discordUsername": "dis-name"
+  },
+  {
+    "id": 1,
+    "discordId": "121212121213",
+    "formSlug": "mtp24",
+    "firstName": "john",
+    "discordGlobalName": "dis john",
+    "discordUsername": "dis-john"
+  }
+]
