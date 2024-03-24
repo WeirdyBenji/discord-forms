@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb329b12-15c9-46cf-a4f3-f25e35bc85ab" name="Changes" comment="feat(cmd): add message id and reply to it, for /link">
+      <change beforePath="$PROJECT_DIR$/commands/utility/link.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/utility/link.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2e55EG8pBUPA1esg7j5Fr9ccNpy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/discord-forms",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "C:\\Users\\Raccoon\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\233.14475.28\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\discord-forms" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-15.0.2-corretto-15.0.2-4caba194b151-9bc2d75a" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb329b12-15c9-46cf-a4f3-f25e35bc85ab" name="Changes" comment="" />
+      <created>1711181485432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711181485432</updated>
+      <workItem from="1711181487011" duration="25961000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1711181956207</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711181956207</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(cmd): add ping slash command &amp; deploy script">
+      <option name="closed" value="true" />
+      <created>1711184612275</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711184612275</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat(cmd): add link cmd &amp; interaction button">
+      <option name="closed" value="true" />
+      <created>1711195053973</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711195053973</updated>
+    </task>
+    <task id="LOCAL-00004" summary="lint: rm brace-style">
+      <option name="closed" value="true" />
+      <created>1711197036355</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711197036355</updated>
+    </task>
+    <task id="LOCAL-00005" summary="lint">
+      <option name="closed" value="true" />
+      <created>1711197066231</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711197066231</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat(btn): filter register-* btn interaction">
+      <option name="closed" value="true" />
+      <created>1711197134940</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711197134940</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat(cmd): add campaign id option to /link">
+      <option name="closed" value="true" />
+      <created>1711197170882</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711197170882</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat(cmd): add campaign id when  link is generated">
+      <option name="closed" value="true" />
+      <created>1711278481558</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711278481558</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat(cmd): add campaign id pre set choices for /link">
+      <option name="closed" value="true" />
+      <created>1711279018474</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711279018474</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat(cmd): add message id and reply to it, for /link">
+      <option name="closed" value="true" />
+      <created>1711279091156</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711279091156</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="feat(cmd): add ping slash command &amp; deploy script" />
+    <MESSAGE value="feat(cmd): add link cmd &amp; interaction button" />
+    <MESSAGE value="lint: rm brace-style" />
+    <MESSAGE value="lint" />
+    <MESSAGE value="feat(btn): filter register-* btn interaction" />
+    <MESSAGE value="feat(cmd): add campaign id option to /link" />
+    <MESSAGE value="feat(cmd): add campaign id when  link is generated" />
+    <MESSAGE value="feat(cmd): add campaign id pre set choices for /link" />
+    <MESSAGE value="feat(cmd): add message id and reply to it, for /link" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(cmd): add message id and reply to it, for /link" />
+  </component>
+</project>
