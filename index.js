@@ -63,7 +63,7 @@ client.on(Events.InteractionCreate, async interaction => {
 		if (interaction.customId && interaction.customId.startsWith('register-')) {
 			const linkButton = new ButtonBuilder()
 				.setLabel('C\'est parti ! 🚀')
-				.setURL(`https://google.fr?entry.33=${interaction.user.globalName}`)
+				.setURL(`https://google.fr?entry.33=${interaction.user.globalName}&entry.12=${interaction.customId.split('register-')[1]}`)
 				.setStyle(ButtonStyle.Link);
 
 			const row = new ActionRowBuilder()
